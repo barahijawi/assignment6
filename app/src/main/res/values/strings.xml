@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">new app</string>
+    <string-array name="sport_types_array">
+        <item>Measure</item>
+        <item>Precision</item>
+        <item>Spectacle</item>
+        <item>Combat</item>
+        <item>Play</item>
+    </string-array>
+</resources>
