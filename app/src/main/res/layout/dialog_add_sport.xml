@@ -1,5 +1,5 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -10,24 +10,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <EditText
-        android:id="@+id/editTextSportName"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutSportName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Sport Name"/>
+        android:layout_marginTop="8dp"
+        app:hintEnabled="true"
+        app:placeholderText="Sport Name">
 
-    <EditText
-        android:id="@+id/editTextInstructions"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextSportName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutInstructions"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Instructions"
-        android:inputType="textMultiLine"
-        android:minLines="4"
-        android:gravity="top"/>
+        android:layout_marginTop="8dp"
+        app:hintEnabled="true"
+        app:placeholderText="Instructions">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:gravity="top"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/buttonAddSport"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Add"/>
 </LinearLayout>

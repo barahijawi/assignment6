@@ -1,11 +1,14 @@
 package com.example.newapp
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
 class SportsViewModel(private val sportsRepository: SportsRepository) : ViewModel() {
+    val sports: LiveData<List<Sport>> = sportsRepository.allSports
+
 
     fun addNewSport(type: String, name: String, instructions: String) {
         viewModelScope.launch {

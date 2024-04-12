@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">new app</string>
+    <string name="news_image_url">News Image URL</string>
+    <string name="news_title">News Title</string>
+    <string name="news_description">News Description</string>
+    <string name="add_news">Add News</string>
     <string-array name="sport_types_array">
         <item>Measure</item>
         <item>Precision</item>
